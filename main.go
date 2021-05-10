@@ -120,7 +120,7 @@ func walkDir(root string, fn func(path string, d fs.DirEntry) error) error {
 	})
 
 	if os.IsNotExist(err) {
-		return fmt.Errorf("directory[%s] does not exist: %s", root, err.Error())
+		return fmt.Errorf("not exist: %s", err.Error())
 	}
 
 	return err
